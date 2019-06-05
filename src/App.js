@@ -1,6 +1,7 @@
 import React from 'react';
 import { declareTypeAlias, throwStatement } from '@babel/types';
 import TodoForm from './components/TodoComponents/TodoForm';
+import TodoList from './components/TodoComponents/TodoList';
 
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -46,6 +47,10 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+
+        <TodoList
+          todos={this.state.todos}
+        />
 
         <TodoForm
           value={this.state.todo}
