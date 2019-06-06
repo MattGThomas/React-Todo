@@ -3,16 +3,17 @@ import { throwStatement } from '@babel/types';
 
 const TodoForm = props => {
     return (
-        <form>
+        <form className='todoForm'>
             <input 
+            className='input'
             type='text'
             placeholder='...enter todo'
             name='todo'
             onChange={props.changeTodoHandle}
             value={props.value}
             />
-            <button onClick={props.addTodoHandle}>Add Todo</button>
-            <button onClick={props.removeCompletedTodo}>Clear Completed</button>
+            <button onClick={props.addTodoHandle} className='addBtn'>Add Todo</button>
+            <button onClick={props.removeCompletedTodo} className='completedBtn'>Clear Completed</button>
         </form>
     )
 }

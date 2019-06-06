@@ -3,7 +3,13 @@ import Todo from './Todo'
 
 const TodoList = props => {
     return (
+    <div className='todoList'>
         <div>
+            <h2>
+                Tasks:
+            </h2>
+        </div>
+        <p>
             {props.todos.map(todo => (
                 <Todo
                     key={todo.id}
@@ -12,7 +18,8 @@ const TodoList = props => {
                     // removeCompleted={props.removeCompleted}
                 />
             ))}
-        </div>
+        </p>
+    </div>
     );
 }
 
