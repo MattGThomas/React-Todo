@@ -13,16 +13,16 @@ class App extends React.Component {
     this.state = {
       todos: [
         {
-          task: 'Organize Garage',
+          task: 'New Task',
           // id: Date.now(),
           id: Math.floor(Math.random() * 1000000),
           completed: false
         },
         {
-          task: 'Bake Cookies',
+          task: 'Completed Task',
           // id: Date.now(),
           id: Math.floor(Math.random() * 1000000),
-          completed: false
+          completed: true
         }
       ],
       todo: ''
