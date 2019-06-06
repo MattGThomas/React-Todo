@@ -14,12 +14,14 @@ class App extends React.Component {
       todos: [
         {
           task: 'Organize Garage',
-          id: Date.now(),
+          // id: Date.now(),
+          id: Math.floor(Math.random() * 1000000),
           completed: false
         },
         {
           task: 'Bake Cookies',
-          id: Date.now(),
+          // id: Date.now(),
+          id: Math.floor(Math.random() * 1000000),
           completed: false
         }
       ],
