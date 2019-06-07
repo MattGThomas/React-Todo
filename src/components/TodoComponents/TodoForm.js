@@ -7,7 +7,7 @@ const TodoForm = props => {
             <input 
             className='input'
             type='text'
-            placeholder='...enter todo'
+            placeholder='...enter new task, not Nubia'
             name='todo'
             onChange={props.changeTodoHandle}
             value={props.value}
