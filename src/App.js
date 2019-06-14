@@ -25,7 +25,10 @@ class App extends React.Component {
           completed: true
         }
       ],
-      todo: ''
+      todo: '',
+
+      searched: [],
+      // this.searchChangeHandler = this.searchChangeHandler
     };
   }
 
@@ -67,6 +70,41 @@ class App extends React.Component {
     this.setState({ todos: completedArr})
   }
 
+  componentDidMount = () => {
+    this.setState({
+      searched: this.state.todos
+    })
+  }
+
+  componentWillReceiveProps = (nextProps) => {
+    this.setState({
+      searched: nextProps.todos
+    })
+  }
+
+  searchChangeHandler = (event) => {
+
+    let currentList = [];
+    let newList = [];
+
+    if (event.target.value !== '') {
+        currentList = this.state.todos
+
+        newList = currentList.filter(todo => {
+            const lowerCaseTodo = todo.toString().toLowerCase();
+            const filter = event.target.value.toLowerCase();
+            return lowerCaseTodo.includes(filter);
+        });
+    } else {
+        newList = this.state.todos;
+    }
+    this.setState({
+        searched: newList
+    });
+}
+
+ 
+
   render() {
     return (
       <div className='todoContainer'>
@@ -82,11 +120,13 @@ class App extends React.Component {
           changeTodoHandle={this.changeTodo}
           addTodoHandle={this.addTodo}
           removeCompletedTodo={this.removeCompleted}
+          searchChangeHandler={this.searchChangeHandler}
         />
         </div>
       </div>
     )
   }
 }
+
 
 export default App;

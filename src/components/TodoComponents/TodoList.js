@@ -15,7 +15,6 @@ const TodoList = props => {
                     key={todo.id}
                     todo={todo}
                     toggleTodo={props.toggleTodo}
-                    // removeCompleted={props.removeCompleted}
                 />
             ))}
         </p>
