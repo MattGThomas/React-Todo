@@ -1,0 +1,66 @@
+.todoContainer {
+    /* background: red; */
+    margin: 0 auto;
+    border: 1px dotted lightgray;
+    max-width: 600px;
+    height: auto;
+    /* padding-bottom: 500px; */
+    padding: 0 2.5%;
+}
+.header {
+    text-align: center;
+}
+.todoContent {
+    display: flex;
+    justify-content: space-between;
+}
+/* .todoList {
+    align-content: center;
+} */
+.todoList h2{
+    /* vertical-align: top; */
+    font-size: 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.todoList p {
+    font-size: 22px;
+}
+.todoList p:hover {
+    cursor: pointer;
+}
+.todoForm {
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    /* font-size: 15px; */
+}
+.todoForm .input {
+    width: 200px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border-radius: 10%;
+}
+.todoForm .addBtn {
+    margin-bottom: 5px;
+    font-size: 15px;
+    border-radius: 1%;
+}
+.todoForm .addBtn:hover{
+    background: yellow;
+    font-size: 22px;
+}
+.todoForm .completedBtn {
+    font-size: 15px;
+    border-radius: 1%;
+}
+.todoForm .completedBtn:hover {
+    background: green;
+    font-size: 22px;
+}
+
+.todo.completed {
+    /* background-color: #d17d7c; */
+    text-decoration: line-through;
+    color: green;
+  }
